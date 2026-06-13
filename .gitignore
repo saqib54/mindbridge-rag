@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules/
+backend/venv/
+backend/__pycache__/
+frontend/dist/
+.system_generated/
+scratch/
+*.log
+
+# API keys and environment files
+backend/.env
+backend/.env.local
+.env
+
+# Vector Database files
+backend/chroma_db/
+*.db
+*.sqlite3
+
+# Generated outputs & exports
+backend/data/6_*.csv
+backend/data/7_*.csv
+backend/data/6_*.xlsx
+backend/data/7_*.xlsx
+
+# OS metadata
+.DS_Store
+Thumbs.db

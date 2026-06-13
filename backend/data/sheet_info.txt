@@ -1,0 +1,19 @@
+﻿.\venv\Scripts\python : <string>:2: DeprecationWarning: 
+At line:1 char:54
++ ... al\cloud chatbot\mindbridge-rag\backend" ; .\venv\Scripts\python -c "
++                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (<string>:2: DeprecationWarning: :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+Sheets: ['SOURCE', 'CHUNKS', 'BENCHMARK QUESTIONS', 'IDEAL ANSWERS', 'RISK']
+Sheet: SOURCE -> 5 rows, cols: ['group_id', 'source_id', 'source_title', 'source_type', 'source_link', 'reason_for_use']
+Sheet: CHUNKS -> 80 rows, cols: ['Group_ID', 'Chunk_ID', 'Topic', 'Category', 'Risk_Level', 'Title', 'Text', 'Source_ID', 'Allowed_use', 'Blocked_use', 'Language']
+Sheet: BENCHMARK QUESTIONS -> 80 rows, cols: ['Group_ID', 'Question_ID', 'Topic', 'User_Question', 'Expected_Risk_Level', 'Expected_Chunk_ID', 'Difficulty', 'Language']
+Sheet: IDEAL ANSWERS -> 80 rows, cols: ['Question_ID', 'Ideal_Answer', 'Must_Include', 'Must_Not_Include', 'Human_Support_Needed']
+Sheet: RISK -> 80 rows, cols: ['Question_ID', 'Risk_Label', 'Reason']

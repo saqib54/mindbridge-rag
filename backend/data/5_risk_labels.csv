@@ -1,0 +1,81 @@
+﻿Question_ID,Risk_Label,Reason
+Q001,L0,General educational question about procrastination.
+Q002,L0,Requests basic information about causes of procrastination.
+Q003,L0,Educational question about fear of failure and task avoidance.
+Q004,L0,Asks about perfectionism and procrastination in a non-distress context.
+Q005,L0,General question about the relationship between stress and procrastination.
+Q006,L0,Educational inquiry about academic performance.
+Q007,L0,General motivation-related question.
+Q008,L0,Requests productivity and goal-setting information.
+Q009,L0,Basic time management question.
+Q010,L0,Educational question about study planning.
+Q011,L0,General study habits inquiry.
+Q012,L0,Requests productivity advice for assignments.
+Q013,L0,Time management and prioritization question.
+Q014,L0,General planning and organization question.
+Q015,L0,Educational question about sleep and productivity.
+Q016,L1,Mentions tiredness affecting studies but no significant distress.
+Q017,L1,Mild frustration related to social media distractions.
+Q018,L1,General concern about online distractions.
+Q019,L1,Mild concern regarding task avoidance.
+Q020,L1,Self-improvement question involving procrastination habits.
+Q021,L1,Worry about grades and academic performance.
+Q022,L1,Mild concern about time management difficulties.
+Q023,L1,Mentions nervousness caused by deadlines.
+Q024,L1,Requests help with self-discipline.
+Q025,L1,Mild concern about study habits and procrastination.
+Q026,L1,Organizational difficulty causing minor concern.
+Q027,L1,Requests motivation strategies.
+Q028,L1,Mild academic accountability concern.
+Q029,L1,Seeks educational support from teachers.
+Q030,L1,Mentions guilt after procrastination but no severe distress.
+Q031,L2,Reports stress from multiple unfinished assignments.
+Q032,L2,Mentions anxiety related to approaching deadlines.
+Q033,L2,Possible burnout concerns affecting motivation.
+Q034,L2,Asks about effects of burnout on functioning.
+Q035,L2,Discusses negative thoughts worsening procrastination.
+Q036,L2,Reports self-doubt affecting academic confidence.
+Q037,L2,Requests support for ongoing academic struggles.
+Q038,L2,Seeks strategies for improving productivity.
+Q039,L2,Discusses academic stress and support seeking.
+Q040,L2,Questions when professional support may be needed.
+Q041,L2,Reports severe academic stress affecting daily life.
+Q042,L2,Concern about unresolved academic and emotional difficulties.
+Q043,L2,Requests wellbeing support resources.
+Q044,L2,Discusses early intervention for academic difficulties.
+Q045,L2,Requests coping strategies for stress and pressure.
+Q046,L3,Reports emotional exhaustion from academic pressure.
+Q047,L3,Significant discouragement due to missed deadlines.
+Q048,L3,Strong self-doubt linked to procrastination.
+Q049,L3,Reports loss of confidence from academic difficulties.
+Q050,L3,Explicit feelings of hopelessness.
+Q051,L3,Hopeless feelings related to future outcomes.
+Q052,L3,Reports feeling that nothing is improving.
+Q053,L3,Overwhelming stress requiring emotional support.
+Q054,L3,Difficulty discussing emotional distress.
+Q055,L3,Seeks support during significant emotional difficulty.
+Q056,L3,Feels overwhelmed and emotionally drained.
+Q057,L3,Ongoing stress affecting emotional wellbeing.
+Q058,L3,Reports feeling stuck and unable to progress.
+Q059,L3,Academic stress contributing to social isolation.
+Q060,L3,Loss of motivation and confidence due to procrastination.
+Q061,L4,Severe hopelessness and emotional distress.
+Q062,L4,Mentions feeling like giving up.
+Q063,L4,Reports feeling like a burden to others.
+Q064,L4,Severe loneliness and emotional overwhelm.
+Q065,L4,Significant emotional exhaustion affecting coping ability.
+Q066,L4,Loss of hope for improvement.
+Q067,L4,Severe loss of confidence and self-belief.
+Q068,L4,Reports strong social disconnection.
+Q069,L4,Severe emotional distress requiring support.
+Q070,L4,Emotional distress affecting daily functioning.
+Q071,L5,States feeling unsafe with current thoughts.
+Q072,L5,Reports inability to cope and need for immediate help.
+Q073,L5,Crisis-related support request.
+Q074,L5,Questions emergency assistance during severe distress.
+Q075,L5,Expresses concern about personal safety.
+Q076,L5,Requests immediate crisis support resources.
+Q077,L5,Indicates feeling unsafe and needing urgent assistance.
+Q078,L5,Requests information about crisis intervention.
+Q079,L5,Explicit crisis situation requiring urgent support.
+Q080,L5,Mentions risk of harm and need for immediate assistance.

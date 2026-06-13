@@ -1,0 +1,81 @@
+﻿Group_ID,Chunk_ID,Topic,Category,Risk_Level,Title,Text,Source_ID,Allowed_use,Blocked_use,Language
+G3,C001,Procrastination,Education,L0,Definition of Procrastination,Procrastination is the habit of delaying important tasks even when they should be completed on time.,S001,Educational support,Medical diagnosis,English
+G3,C002,Procrastination,Education,L0,Causes of Procrastination,"Fear of failure, distractions, and poor planning are common causes of procrastination.",S001,Educational support,Medical diagnosis,English
+G3,C003,Procrastination,Education,L0,Fear of Failure,Students may avoid assignments because they are afraid of making mistakes.,S001,Educational support,Medical diagnosis,English
+G3,C004,Procrastination,Education,L0,Perfectionism,Waiting for perfect conditions can delay progress and increase procrastination.,S001,Educational support,Medical diagnosis,English
+G3,C005,Stress Management,Education,L0,Procrastination and Stress,Delaying tasks often creates pressure as deadlines approach.,S002,Educational support,Medical diagnosis,English
+G3,C006,Academic Performance,Education,L0,Academic Impact,Procrastination can reduce the quality of academic work and learning outcomes.,S002,Educational support,Medical diagnosis,English
+G3,C007,Academic Motivation,Education,L0,Role of Motivation,Motivation encourages students to start and complete tasks.,S003,Educational support,Medical diagnosis,English
+G3,C008,Goal Setting,Education,L0,Goal Setting Benefits,Clear goals help students stay focused and organized.,S003,Educational support,Medical diagnosis,English
+G3,C009,Time Management,Education,L0,Time Management Skills,Managing time effectively helps students meet deadlines.,S004,Educational support,Medical diagnosis,English
+G3,C010,Study Planning,Education,L0,Study Planning,Planning study sessions reduces last-minute pressure.,S004,Educational support,Medical diagnosis,English
+G3,C011,Study Habits,Education,L0,Study Schedules,Study schedules create structure and consistency.,S004,Educational support,Medical diagnosis,English
+G3,C012,Productivity,Education,L0,Small Task Approach,Large assignments become easier when divided into smaller tasks.,S004,Educational support,Medical diagnosis,English
+G3,C013,Time Management,Education,L0,Prioritization,Prioritizing important tasks improves efficiency.,S004,Educational support,Medical diagnosis,English
+G3,C014,Time Management,Education,L0,Daily Planning,Daily planning helps students monitor progress.,S004,Educational support,Medical diagnosis,English
+G3,C015,Student Wellbeing,Education,L0,Sleep and Productivity,Adequate sleep supports concentration and learning.,S005,Educational support,Medical diagnosis,English
+G3,C016,Student Wellbeing,Education,L1,Lack of Sleep,"Lack of sleep can reduce focus, energy, and motivation, making it harder to complete academic tasks.",S005,Educational support,Medical diagnosis,English
+G3,C017,Digital Distractions,Education,L1,Social Media Distractions,Frequent social media use can interrupt study sessions and contribute to procrastination.,S005,Educational support,Medical diagnosis,English
+G3,C018,Digital Distractions,Education,L1,Online Distractions,Notifications and online entertainment can make it difficult to maintain concentration.,S005,Educational support,Medical diagnosis,English
+G3,C019,Procrastination,Education,L1,Task Avoidance,Avoiding difficult tasks may provide short-term relief but often increases pressure later.,S001,Educational support,Medical diagnosis,English
+G3,C020,Self-Awareness,Education,L1,Recognizing Habits,Identifying procrastination habits is an important step toward improving productivity.,S001,Educational support,Medical diagnosis,English
+G3,C021,Academic Achievement,Education,L1,Impact on Grades,Frequent procrastination can negatively affect academic performance and grades.,S002,Educational support,Medical diagnosis,English
+G3,C022,Time Management,Education,L1,Underestimating Time,Students often underestimate the time required to complete assignments successfully.,S004,Educational support,Medical diagnosis,English
+G3,C023,Time Management,Education,L1,Deadline Pressure,Approaching deadlines can increase worry and create additional stress.,S002,Educational support,Medical diagnosis,English
+G3,C024,Self-Discipline,Education,L1,Building Discipline,Self-discipline helps students stay committed to important responsibilities.,S003,Educational support,Medical diagnosis,English
+G3,C025,Study Habits,Education,L1,Effective Study Habits,Positive study habits reduce delays and improve consistency.,S003,Educational support,Medical diagnosis,English
+G3,C026,Organization,Education,L1,Reminders and Calendars,Reminders and calendars help students keep track of deadlines and commitments.,S004,Educational support,Medical diagnosis,English
+G3,C027,Motivation,Education,L1,Reward Systems,Small rewards can encourage students to complete tasks and stay motivated.,S003,Educational support,Medical diagnosis,English
+G3,C028,Peer Support,Education,L1,Accountability Partners,Friends and classmates can provide encouragement and accountability.,S005,Educational support,Medical diagnosis,English
+G3,C029,Academic Support,Education,L1,Teacher Support,Teachers can provide guidance and feedback to help students overcome challenges.,S005,Educational support,Medical diagnosis,English
+G3,C030,Productivity,Education,L1,Returning to Productivity,"After periods of procrastination, students can regain focus through planning and small achievable goals.",S004,Educational support,Medical diagnosis,English
+G3,C031,Stress Management,Education,L2,Stress from Delays,Repeatedly delaying tasks can create ongoing stress and make academic responsibilities feel more difficult.,S002,Educational support,Medical diagnosis,English
+G3,C032,Stress Management,Education,L2,Anxiety Before Deadlines,Anxiety often increases when important deadlines are approaching and work remains unfinished.,S002,Educational support,Medical diagnosis,English
+G3,C033,Student Wellbeing,Education,L2,Academic Burnout,Academic burnout is a state of exhaustion caused by prolonged academic pressure and workload.,S005,Educational support,Medical diagnosis,English
+G3,C034,Student Wellbeing,Education,L2,Effects of Burnout,"Burnout can reduce motivation, concentration, and interest in academic activities.",S005,Educational support,Medical diagnosis,English
+G3,C035,Emotional Wellbeing,Education,L2,Negative Thinking Patterns,Negative thoughts about performance can increase avoidance behaviors and procrastination.,S002,Educational support,Medical diagnosis,English
+G3,C036,Confidence Building,Education,L2,Academic Confidence,Confidence can improve when students complete small goals and recognize their progress.,S003,Educational support,Medical diagnosis,English
+G3,C037,Academic Support,Education,L2,Learning Support Services,Educational support services can help students develop effective study and learning strategies.,S005,Educational support,Medical diagnosis,English
+G3,C038,Study Skills,Education,L2,Effective Learning Techniques,Active learning methods improve understanding and encourage consistent study habits.,S003,Educational support,Medical diagnosis,English
+G3,C039,Stress Management,Education,L2,Talking About Stress,Discussing academic stress with trusted individuals can provide emotional support and guidance.,S005,Educational support,Medical diagnosis,English
+G3,C040,Student Wellbeing,Education,L2,Professional Guidance,Professional support may help students manage ongoing academic and emotional challenges.,S005,Educational support,Medical diagnosis,English
+G3,C041,Stress Management,Education,L2,Severe Academic Stress,High levels of academic stress can interfere with concentration and daily functioning.,S002,Educational support,Medical diagnosis,English
+G3,C042,Student Wellbeing,Education,L2,Ignoring Challenges,Ignoring academic difficulties may allow stress and pressure to increase over time.,S002,Educational support,Medical diagnosis,English
+G3,C043,Student Support,Education,L2,Wellbeing Resources,Schools and universities often provide wellbeing services for students experiencing difficulties.,S005,Educational support,Medical diagnosis,English
+G3,C044,Student Support,Education,L2,Early Intervention,Seeking support early can prevent academic and emotional difficulties from becoming more serious.,S005,Educational support,Medical diagnosis,English
+G3,C045,Coping Strategies,Education,L2,Healthy Stress Management,"Healthy coping strategies include planning, organization, relaxation, and seeking support when needed.",S005,Educational support,Medical diagnosis,English
+G3,C046,Student Wellbeing,Education,L3,Emotional Exhaustion,Continuous academic pressure can leave students feeling emotionally exhausted and mentally drained.,S005,Educational support,Medical diagnosis,English
+G3,C047,Emotional Distress,Education,L3,Discouragement from Delays,Repeatedly missing deadlines may lead to discouragement and frustration about academic progress.,S005,Educational support,Medical diagnosis,English
+G3,C048,Emotional Distress,Education,L3,Self-Doubt,Persistent procrastination can increase self-doubt and reduce confidence in personal abilities.,S005,Educational support,Medical diagnosis,English
+G3,C049,Emotional Distress,Education,L3,Loss of Confidence,Students may lose confidence when they believe they are unable to meet expectations.,S005,Educational support,Medical diagnosis,English
+G3,C050,Emotional Distress,Education,L3,Feelings of Hopelessness,Ongoing academic struggles can sometimes create feelings of hopelessness about improvement.,S005,Educational support,Medical diagnosis,English
+G3,C051,Emotional Distress,Education,L3,Academic Frustration,Frustration may increase when effort does not seem to produce immediate results.,S005,Educational support,Medical diagnosis,English
+G3,C052,Emotional Distress,Education,L3,Feeling Stuck,Some students feel stuck when procrastination becomes a repeated pattern in their lives.,S005,Educational support,Medical diagnosis,English
+G3,C053,Emotional Support,Education,L3,Seeking Support,"Talking with trusted friends, family members, or mentors can provide valuable emotional support.",S005,Educational support,Medical diagnosis,English
+G3,C054,Emotional Support,Education,L3,Barriers to Asking for Help,Some students hesitate to seek help because of embarrassment or fear of judgment.,S005,Educational support,Medical diagnosis,English
+G3,C055,Emotional Support,Education,L3,Importance of Communication,Sharing concerns with others can reduce feelings of isolation and stress.,S005,Educational support,Medical diagnosis,English
+G3,C056,Emotional Distress,Education,L3,Feeling Overwhelmed,Large workloads and multiple deadlines can make students feel overwhelmed.,S002,Educational support,Medical diagnosis,English
+G3,C057,Emotional Distress,Education,L3,Stress and Wellbeing,Persistent stress can negatively affect emotional wellbeing and daily functioning.,S002,Educational support,Medical diagnosis,English
+G3,C058,Emotional Distress,Education,L3,Lack of Progress,Feeling unable to make progress may increase discouragement and frustration.,S005,Educational support,Medical diagnosis,English
+G3,C059,Emotional Distress,Education,L3,Social Withdrawal,Academic stress may cause some students to withdraw from social activities and support networks.,S005,Educational support,Medical diagnosis,English
+G3,C060,Emotional Distress,Education,L3,Loss of Motivation,Repeated procrastination can gradually reduce motivation and enthusiasm for learning.,S003,Educational support,Medical diagnosis,English
+G3,C061,Severe Emotional Distress,Education,L4,Persistent Hopelessness,Persistent hopeless feelings may make it difficult for students to see positive solutions to their challenges.,S005,Educational support,Medical diagnosis,English
+G3,C062,Severe Emotional Distress,Education,L4,Feeling Like Giving Up,Intense academic pressure may sometimes cause students to feel like giving up on their goals.,S005,Educational support,Medical diagnosis,English
+G3,C063,Severe Emotional Distress,Education,L4,Feeling Like a Burden,Some students experiencing severe stress may believe they are a burden to others.,S005,Educational support,Medical diagnosis,English
+G3,C064,Severe Emotional Distress,Education,L4,Feeling Alone,Severe academic and emotional stress can contribute to feelings of loneliness and isolation.,S005,Educational support,Medical diagnosis,English
+G3,C065,Severe Emotional Distress,Education,L4,Emotional Exhaustion and Recovery,Emotional exhaustion can reduce a student's ability to cope with everyday responsibilities.,S005,Educational support,Medical diagnosis,English
+G3,C066,Severe Emotional Distress,Education,L4,Loss of Hope for Improvement,Students under prolonged pressure may struggle to believe their situation can improve.,S005,Educational support,Medical diagnosis,English
+G3,C067,Severe Emotional Distress,Education,L4,Loss of Academic Confidence,Severe discouragement can result in a loss of confidence in academic abilities.,S005,Educational support,Medical diagnosis,English
+G3,C068,Severe Emotional Distress,Education,L4,Social Disconnection,"Emotional distress may cause students to feel disconnected from friends, family, or classmates.",S005,Educational support,Medical diagnosis,English
+G3,C069,Severe Emotional Distress,Education,L4,Need for Support Networks,Strong support networks can help students manage periods of severe emotional distress.,S005,Educational support,Medical diagnosis,English
+G3,C070,Severe Emotional Distress,Education,L4,Impact on Daily Functioning,"Significant emotional distress can affect concentration, routines, and academic performance.",S005,Educational support,Medical diagnosis,English
+G3,C071,Crisis Support,Education,L5,Crisis Situations,Crisis situations require immediate attention and access to appropriate support resources.,S005,Educational support,Medical diagnosis,English
+G3,C072,Crisis Support,Education,L5,Immediate Help,Individuals experiencing a crisis should seek immediate assistance from trusted support services.,S005,Educational support,Medical diagnosis,English
+G3,C073,Crisis Support,Education,L5,Safety Planning,Safety planning involves identifying supportive contacts and emergency resources during difficult situations.,S005,Educational support,Medical diagnosis,English
+G3,C074,Crisis Support,Education,L5,Emergency Resources,Emergency and crisis support resources are available to help individuals during urgent situations.,S005,Educational support,Medical diagnosis,English
+G3,C075,Crisis Support,Education,L5,Reaching Out Quickly,Contacting trusted people promptly can be an important step during a crisis.,S005,Educational support,Medical diagnosis,English
+G3,C076,Crisis Support,Education,L5,Professional Crisis Support,Crisis support professionals are trained to assist individuals facing urgent emotional difficulties.,S005,Educational support,Medical diagnosis,English
+G3,C077,Crisis Support,Education,L5,Accessing Emergency Assistance,Emergency assistance should be accessed when personal safety is at immediate risk.,S005,Educational support,Medical diagnosis,English
+G3,C078,Crisis Support,Education,L5,Urgent Intervention,Urgent intervention may be necessary when distress becomes severe and unmanageable.,S005,Educational support,Medical diagnosis,English
+G3,C079,Crisis Support,Education,L5,Crisis Support Awareness,Awareness of crisis resources can help individuals respond quickly during emergencies.,S005,Educational support,Medical diagnosis,English
+G3,C080,Crisis Support,Education,L5,Emergency Assistance,Immediate professional assistance is important when a person is at risk of harm.,S005,Educational support,Medical diagnosis,English

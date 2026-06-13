@@ -1,0 +1,34 @@
+﻿.\venv\Scripts\python : <string>:2: DeprecationWarning: 
+At line:1 char:54
++ ... al\cloud chatbot\mindbridge-rag\backend" ; .\venv\Scripts\python -c "
++                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (<string>:2: DeprecationWarning: :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+=== CHUNKS (first 3) ===
+  Chunk_ID            Topic   Category Risk_Level                          Title                                                                                                  Text
+0     C001  Procrastination  Education         L0  Definition of Procrastination  Procrastination is the habit of delaying important tasks even when they should be completed on time.
+1     C002  Procrastination  Education         L0      Causes of Procrastination                Fear of failure, distractions, and poor planning are common causes of procrastination.
+2     C003  Procrastination  Education         L0                Fear of Failure                            Students may avoid assignments because they are afraid of making mistakes.
+
+=== QUESTIONS (first 3) ===
+  Question_ID                                            User_Question Expected_Risk_Level
+0        Q001                                 What is procrastination?                  L0
+1        Q002           What are the common causes of procrastination?                  L0
+2        Q003  How does fear of failure contribute to procrastination?                  L0
+
+=== RISK (first 3) ===
+  Question_ID Risk_Label                                                          Reason
+0        Q001         L0             General educational question about procrastination.
+1        Q002         L0     Requests basic information about causes of procrastination.
+2        Q003         L0  Educational question about fear of failure and task avoidance.
+
+Risk levels in CHUNKS: ['L0' 'L1' 'L2' 'L3' 'L4' 'L5']
+Risk levels in QUESTIONS: ['L0' 'L1' 'L2' 'L3' 'L4' 'L5']
+Risk labels in RISK: ['L0' 'L1' 'L2' 'L3' 'L4' 'L5']
