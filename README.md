@@ -1,146 +1,157 @@
+<div align="center">
+
 # 🧠 MindBridge-RAG
-### *Safety-Aware Student Support Chatbot*
+### *Safety-Aware Student Support System*
 
-MindBridge-RAG is a web application designed to demonstrate the critical importance of safety-aware processing in student support chatbots. The system compares three different approaches side-by-side: **S0 (Direct LLM)**, **S1 (Basic RAG)**, and **S2 (Safety-Aware RAG)**.
-
-This project showcases how a safety classifier can detect distress levels (L0 to L5) in student queries and dynamically apply empathy protocols or intercept high-risk situations (like crisis or medical boundary questions) with immediate, human-in-the-loop crisis resources.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109.2-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5.0-ff69b4?style=for-the-badge)](https://www.trychroma.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 ---
 
-## 🖥️ User Interface Preview
+**MindBridge-RAG** is a research and evaluation application comparing three architectures: **S0 (Direct LLM)**, **S1 (Basic RAG)**, and **S2 (Safety-Aware RAG)** in student support environments. Using a custom safety classifier, it detects student queries categorized from L0 (Normal) to L5 (Out of Scope), triggers protocol interventions, and guides student interactions safely.
 
-### 1. Landing Page
-A premium, modern dark-themed interface built with Tailwind CSS. It introduces the project and allows users to jump straight into dataset management or the chat workspace.
+</div>
+
+---
+
+## 🖥️ Project Showcase
+
+### 1. Welcome & Onboarding
+The landing page introduces the application design system and outlines the comparison architecture.
 ![MindBridge-RAG Landing Page](docs/images/landing_page.png)
 
-### 2. Dataset Manager
-Manage and preview knowledge bases (CSV format). Index chunks into a vector database (ChromaDB) with a single click.
+### 2. Dataset Management
+Load and manage CSV datasets representing sources, corpus chunks, benchmark questions, and ideal answers. The system indexes chunks dynamically into a persistent ChromaDB instance.
 ![Dataset Manager](docs/images/dataset_manager.png)
 
-### 3. Side-by-Side Comparison Workspace
-Type any student query to see S0, S1, and S2 process the inputs simultaneously and display their responses.
-![Side-by-Side Comparison Input](docs/images/chat_compare_input.png)
-![Side-by-Side Comparison Results](docs/images/chat_compare_results.png)
+### 3. Comparison Workspace
+Enter prompts to view side-by-side responses and risk detection metrics in real time.
+![Comparison Workspace Input](docs/images/chat_compare_input.png)
+![Comparison Workspace Results](docs/images/chat_compare_results.png)
 
-### 4. Human & LLM-as-a-Judge Evaluation
-Evaluate responses on Relevance, Helpfulness, Faithfulness, Safety, and Clarity using both manual scoring and automatic LLM evaluation (using Gemini as a judge).
-![Human & Auto Evaluation](docs/images/human_evaluation.png)
+### 4. Human & Automated Evaluation
+Rate and log system responses. Run batch evaluations of all benchmark questions using an LLM-as-a-Judge API and view granular evaluation logs.
+![Evaluation Settings](docs/images/human_evaluation.png)
+![Evaluation Log Details](docs/images/human_evaluation_details.png)
+
+### 5. Analytics Dashboard
+Visualize metrics like query response times, evaluation scores (Relevance, Helpfulness, Faithfulness, Safety, Clarity), and risk level distributions.
+![Analytics Dashboard](docs/images/analytics_dashboard.png)
+![Metrics Comparison & Performance Radar](docs/images/analytics_metrics.png)
+![Risk Distribution & Performance Winner](docs/images/analytics_risk_distribution.png)
+![Reports Export](docs/images/analytics_downloads.png)
 
 ---
 
-## 🛠️ System Architecture & Workflow
+## 📐 System Flow Diagram
 
-The core difference between the systems lies in their architectural paths:
+The diagram below illustrates how a query is processed across all three pipeline systems:
 
 ```mermaid
 graph TD
-    User([Student Query]) --> Classifier{S2 Risk Classifier}
-    
+    %% Define styles
+    classDef main fill:#1e1e2f,stroke:#6c5ce7,stroke-width:2px,color:#fff;
+    classDef database fill:#2d3436,stroke:#e17055,stroke-width:2px,color:#fff;
+    classDef process fill:#2d3748,stroke:#0984e3,stroke-width:2px,color:#fff;
+    classDef output fill:#2d3748,stroke:#00b894,stroke-width:2px,color:#fff;
+    classDef classifier fill:#2d3748,stroke:#fdcb6e,stroke-width:2px,color:#fff;
+
+    User([Student Query]):::main --> S0_Direct[S0: Direct Route]:::process
+    User --> S1_RAG[S1: Basic RAG Route]:::process
+    User --> S2_Safety[S2: Safety-Aware Route]:::process
+
     %% S0 Route
-    User -->|Direct Prompt| S0[S0: Direct LLM]
-    S0 --> S0_Out[Raw LLM Response]
+    S0_Direct -->|Plain Query| Gemini_S0[Gemini 2.0 Flash]:::process
+    Gemini_S0 --> S0_Out[S0 Response]:::output
 
     %% S1 Route
-    User -->|Embed Query| S1[S1: ChromaDB Top-3]
-    S1 -->|Inject Context| S1_LLM[Gemini 1.5 Flash]
-    S1_LLM --> S1_Out[Basic RAG Response]
+    S1_RAG -->|Generate Query Embeddings| Chroma_S1[(ChromaDB Vector Store)]:::database
+    Chroma_S1 -->|Retrieve Top-3 Chunks| Build_Context_S1[Build Context String]:::process
+    Build_Context_S1 -->|Context + Query| Gemini_S1[Gemini 1.5 Flash]:::process
+    Gemini_S1 --> S1_Out[S1 Response]:::output
 
     %% S2 Route
-    Classifier -->|L0: Normal| S2_Normal[ChromaDB Top-3 + Standard RAG]
-    Classifier -->|L1/L2: Stress/Distress| S2_Empathetic[ChromaDB Top-5 + Empathetic Prompt + Resources]
-    Classifier -->|L3: Crisis| S2_Crisis[Hardcoded Crisis protocol + Emergency Numbers]
-    Classifier -->|L4: Medical| S2_Medical[Healthcare Professional Referral Boundary]
-    Classifier -->|L5: Out of Scope| S2_Scope[Redirect to Scope Boundary]
-
-    S2_Normal --> S2_LLM[Gemini 1.5 Flash]
-    S2_Empathetic --> S2_LLM
+    S2_Safety --> S2_Classifier{Risk Classifier}:::classifier
     
-    S2_LLM --> S2_Out[Safety-Aware Response]
-    S2_Crisis --> S2_Out
-    S2_Medical --> S2_Out
-    S2_Scope --> S2_Out
+    %% S2 Classifier Options
+    S2_Classifier -->|L0: Normal| S2_L0[Retrieve Top-3 Chunks]:::process
+    S2_Classifier -->|L1: Stress| S2_L1[Retrieve Top-3 Chunks + Empathetic Prompt]:::process
+    S2_Classifier -->|L2: Distress| S2_L2[Retrieve Top-5 Chunks + Empathetic Prompt + Resources]:::process
+    S2_Classifier -->|L3: Crisis| S2_L3[Crisis Protocol: Injects Helplines, Bypasses RAG]:::process
+    S2_Classifier -->|L4: Medical| S2_L4[Medical Refusal Protocol]:::process
+    S2_Classifier -->|L5: Out of Scope| S2_L5[Redirect Scope Protocol]:::process
+
+    %% S2 Database Retrieval
+    S2_L0 -.-> Chroma_S2[(ChromaDB Vector Store)]:::database
+    S2_L1 -.-> Chroma_S2
+    S2_L2 -.-> Chroma_S2
+
+    %% S2 Generation
+    Chroma_S2 --> S2_Context[Build Level-Specific Context]:::process
+    S2_Context --> S2_LLM[Gemini 1.5 Flash]:::process
+    S2_L1 --> S2_LLM
+    S2_L2 --> S2_LLM
+    
+    S2_LLM --> S2_Out[S2 Response]:::output
+    S2_L3 --> S2_Out
+    S2_L4 --> S2_Out
+    S2_L5 --> S2_Out
+
+    %% Evaluation Pipeline
+    S0_Out --> Eval_Pipeline[Automated/Manual Evaluation]:::main
+    S1_Out --> Eval_Pipeline
+    S2_Out --> Eval_Pipeline
+    Eval_Pipeline --> CSV_Store[CSV/Excel Export]:::database
 ```
 
 ---
 
-## 🎯 Risk Classification & Protocol Table
+## 🎯 Risk Protocol Classification
 
-| Level | Code | Description | S2 Protocol Action |
-| :--- | :--- | :--- | :--- |
-| **L0** | `L0_NORMAL` | Standard queries regarding academics or university facts. | Standard RAG prompt template. Retrieves top-3 chunks. |
-| **L1** | `L1_STRESS` | Mild stress/academic anxiety. | Empathetic RAG prompt template. Retrieves top-3 chunks. |
-| **L2** | `L2_DISTRESS` | Significant emotional distress or academic burnout. | Empathetic prompt + injects campus wellness center resources. Retrieves top-5 chunks. |
-| **L3** | `L3_CRISIS` | High-risk queries, self-harm, or suicidal ideation. | **Bypasses RAG entirely.** Instantly triggers crisis protocol, returning emergency numbers (988, helplines). |
-| **L4** | `L4_MEDICAL` | Requesting clinical diagnosis or medical treatment. | Declines medical advice and redirects to verified medical professionals. |
-| **L5** | `L5_OUT_OF_SCOPE` | Unrelated or off-topic questions. | Redirects the user politely to the chatbot's intended scope. |
-
----
-
-## 🧰 Tech Stack & Tools Used
-
-### Backend
-* **FastAPI:** Python ASGI web framework for building highly performant APIs.
-* **ChromaDB:** A fast, persistent, developer-friendly vector database to store and retrieve chunks of the university knowledge base.
-* **Google Gemini API:** Utilized `gemini-embedding-2` for creating 3072-dimensional vector embeddings, and `gemini-2.0-flash` / `gemini-3.5-flash` for high-speed, high-quality generation.
-* **Groq SDK:** Integrated `AsyncGroq` client supporting high-throughput Llama models (e.g. `llama-3.1-8b-instant`).
-* **Pandas & Openpyxl:** Data parsing and conversion of CSV/Excel datasets for analytics and reporting.
-
-### Frontend
-* **React (Vite):** Frontend framework for clean SPA (Single Page Application) rendering.
-* **Tailwind CSS:** For custom styling, gradients, glassmorphism UI elements, and layout management.
-* **Chart.js:** Powering the analytics dashboard with visual metrics on evaluation scores and latency.
-* **Lucide Icons:** A clean, cohesive iconography library.
+| Level | Code | Target Queries | Pipeline Protocol |
+| :---: | :---: | :--- | :--- |
+| **L0** | `L0_NORMAL` | Informational queries, course structure, general questions. | Standard RAG retrieval ($K=3$). Direct information processing. |
+| **L1** | `L1_STRESS` | Expressing exam worry, mild workload stress, study time limits. | RAG retrieval ($K=3$) + Empathetic framework layer. |
+| **L2** | `L2_DISTRESS` | Significant emotional fatigue, burnout feelings, severe isolation. | Custom RAG prompt ($K=5$) + Injection of campus counselling resources. |
+| **L3** | `L3_CRISIS` | High-risk indications, self-harm thoughts, explicit hopelessness. | **Interrupts RAG.** Short-circuits generation to output emergency crisis numbers. |
+| **L4** | `L4_MEDICAL` | Inquiries requesting clinical diagnosis or prescribing medications. | Refusal protocol directing to student medical centers. |
+| **L5** | `L5_OUT_OF_SCOPE` | Off-topic requests (e.g. investment tips, programming code). | Friendly boundary reminder redirecting to chatbot scope. |
 
 ---
 
-## 📁 Repository Structure
-```
-mindbridge-rag/
-├── backend/                 # Python FastAPI Backend
-│   ├── main.py             # Main entry point containing routes
-│   ├── groq_client.py      # Groq (Llama) + Gemini Hybrid Client
-│   ├── gemini_client.py    # Native Gemini API Client
-│   ├── chroma_client.py    # ChromaDB Vector Store integration
-│   ├── rag_engine.py       # S1 and S2 retrieval-generation logic
-│   ├── safety_classifier.py# High-speed prompt-based risk level evaluator
-│   ├── csv_parser.py       # CSV dataset importer
-│   └── data/               # University resources, benchmark queries & ideal responses
-│
-├── frontend/               # React + Tailwind CSS Frontend
-│   ├── src/
-│   │   ├── pages/          # Home, Dataset, Chat Compare, Evaluate, Analytics
-│   │   ├── components/     # UI elements (ChatCard, RiskBadge, Navbar)
-│   │   └── index.css       # Custom stylesheets & Tailwind config
-│   └── vite.config.js      # Dev proxy server setup
-│
-├── docs/images/            # Visual screenshots embedded in README.md
-└── start_all.bat           # Launcher script for Windows environment
-```
+## 🛠️ Technology Stack & Dependencies
+
+* **FastAPI:** High-performance Python backend API.
+* **ChromaDB:** Local vector database for semantic search on source documents.
+* **Google Gemini API:** Native models for text-embeddings (`gemini-embedding-2`) and generation (`gemini-2.0-flash` & `gemini-3.5-flash`).
+* **Groq SDK:** Integrates fast-inference open-weights models like `llama-3.1-8b-instant`.
+* **React + Vite:** Modular frontend single page application layout.
+* **Tailwind CSS:** Modern utility-first CSS styling.
+* **Chart.js:** Charts for evaluations and performance analytics.
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 Quick Start Guide
 
-### Prerequisites
-* **Python 3.10+**
-* **Node.js 18+**
-* **Google Gemini API Key** and/or **Groq API Key**
-
-### 1. Configure Environment Variables
-Create a file named `.env` in the `backend/` directory:
+### 1. Setup Backend environment variables
+In `backend/`, create a `.env` file containing:
 ```env
-GEMINI_API_KEY=your_gemini_api_key_here
-GROQ_API_KEY=your_groq_api_key_here
+GEMINI_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
 GROQ_MODEL=llama-3.1-8b-instant
 CHROMA_PERSIST_DIR=./chroma_db
 DATA_DIR=./data
 ```
 
-### 2. Start Services
-Simply run the launcher script from the root directory:
+### 2. Install dependencies & Start Services
+Using the automated launcher script (Windows):
 ```bash
 start_all.bat
 ```
-*(Alternatively, navigate to `backend/` and run `uvicorn main:app --port 8001`, and navigate to `frontend/` and run `npm run dev`)*
+*(Otherwise, run `pip install -r requirements.txt && uvicorn main:app --port 8001` in the backend directory, and `npm install && npm run dev` in the frontend directory)*
 
-Open **[http://localhost:3000](http://localhost:3000)** in your web browser. Make sure to visit the **Dataset** tab first to load the default dataset chunks into the vector store!
+Open **[http://localhost:3000](http://localhost:3000)** in your browser and visit the **Dataset** manager to load defaults!
